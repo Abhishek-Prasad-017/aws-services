@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 sudo systemctl stop aws
-sudo kill -9 $(sudo lsof -t -i:5000)
 exit 0

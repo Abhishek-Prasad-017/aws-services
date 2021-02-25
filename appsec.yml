@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+ - source: /src
+   destination: /home/ubuntu/python-flask-service
+ - source: requirements.txt
+   destination: /home/ubuntu/python-flask-service
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+
+hooks:
+  ApplicationStart:
+   - location: scripts/start_server
+     timeout: 300
+     runas: ubuntu
+  ApplicationStop:
+   - location: scripts/stop_server
+     timeout: 300
+     runas: ubuntu

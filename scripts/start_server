@@ -1,1 +1,1 @@
-sudo systemd start aws
+cd /home/ubuntu/python-flask-service

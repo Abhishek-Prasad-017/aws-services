@@ -1,2 +1,4 @@
+#!/usr/bin/env bash
 cd /home/ubuntu/python-flask-service
 python3 app.py
+
